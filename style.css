@@ -1,0 +1,75 @@
+
+body {
+    background: linear-gradient(120deg, #e0f2fe, #f3e8ff);
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+}
+
+.event-card {
+    max-width: 520px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.12);
+    transition: background-color 0.3s;
+}
+
+.event-icon {
+    font-size: 42px;
+}
+
+#eventHeading {
+    color: #4f46e5;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#instructions,
+#eventPanel {
+    display: none;
+}
+
+.source-section {
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+#sourceCode {
+    background: #111827;
+    color: #a7f3d0;
+    padding: 18px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    overflow-x: auto;
+    max-height: 500px;
+    font-size: 12px;
+}
+
+.color-theme {
+    background: #172554;
+    color: white;
+}
+
+.color-theme #eventHeading {
+    color: #facc15;
+}
+
+.color-theme .form-control,
+.color-theme .form-select {
+    background: #334155;
+    color: white;
+}
+
+@media (max-width: 576px) {
+    main.container {
+        padding-top: 20px !important;
+    }
+
+    .event-card {
+        padding: 20px !important;
+    }
+
+    #eventHeading {
+        font-size: 1.7rem;
+    }
+}

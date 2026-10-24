@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Event Portal</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="container py-5">
+    <section class="event-card mx-auto p-4">
+        <div class="text-center mb-4">
+            <span class="event-icon">🎓</span>
+            <h1 id="eventHeading">Student Registration</h1>
+            <p>Register today. Participate tomorrow.</p>
+        </div>
+
+        <div id="instructions" class="alert alert-info">
+            Complete the form below to register for a university event.
+        </div>
+
+        <button type="button" id="instructionButton"
+                class="btn btn-outline-primary btn-sm mb-3">
+            Toggle Instructions
+        </button>
+
+        <form id="eventForm" novalidate>
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName"
+                       placeholder="Enter your full name">
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email"
+                       placeholder="name@example.com">
+            </div>
+
+            <div class="mb-3">
+                <label for="eventChoice" class="form-label">Choose an Event</label>
+                <select class="form-select" id="eventChoice">
+                    <option value="">Select an event</option>
+                    <option value="Tech Innovation Day">Tech Innovation Day</option>
+                    <option value="Annual Sports Gala">Annual Sports Gala</option>
+                    <option value="Creative Coding Workshop">Creative Coding Workshop</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+                Submit Registration
+            </button>
+        </form>
+
+        <div id="feedback" class="mt-3" aria-live="polite"></div>
+
+        <div class="d-grid gap-2 mt-3">
+            <button type="button" id="colorButton"
+                    class="btn btn-dark">Change Card Color</button>
+
+            <button type="button" id="detailsButton"
+                    class="btn btn-outline-secondary">View Event List</button>
+
+            <button type="button" id="addButton"
+                    class="btn btn-success">Add Selected Event</button>
+        </div>
+
+        <div id="eventPanel" class="mt-3">
+            <h5>University Events</h5>
+            <ul id="eventList">
+                <li>Tech Innovation Day</li>
+                <li>Annual Sports Gala</li>
+                <li>Creative Coding Workshop</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="source-section mt-5">
+        <h2>Project Source Code</h2>
+        <p>Complete source files are displayed below.</p>
+        <pre id="sourceCode">Loading source code...</pre>
+    </section>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
+<script src="jquery.js"></script>
+</body>
+</html>
